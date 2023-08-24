@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f8ff;
+    padding: 0 20px;
+}
+section .container{
+    position: relative;
+    height: 220px;
+    max-width: 550px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    width: 100%;
+}
+section.dark .container{
+    background: #323840;
+}
+section .container .icons i{
+    transition: all 0.4 ease-in-out;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    background: #24292d;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+}
+section.dark .container .icons i{
+    background: #fff;
+    color: #323840;
+}
+section.dark .container .icons i.fa-sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+section .container .icons i.fa-sun{
+    opacity: 0;
+    pointer-events: none;
+}
+section .container .time{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+section .container .time .time__colon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f8ff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+}
+section .container .time .time__colon .time__text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+section.dark .container .time .time__colon{
+    background: #24292d;
+}
+section.dark .container .time .time__colon .time__text{
+    color: #fff;
+}
+section .container .time .colon{
+    font-size: 40px;
+    margin: 0 10px;
+}
+section.dark .container .time .colon{
+    color: #fff;
+}
+
+section .container .time .time__colon .time__text .text{
+    font-size: 14px;
+    font-weight: 500;
+}
+section .container .time .am__pm{
+    position: absolute;
+    top: 0;
+    right: -45px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+section.dark .container .time .am__pm{
+    color: #fff;
+}
+
+@media (max-width: 500px){
+    section .container .icons i{
+        right: 15px;
+        top: 15px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+    section .container .time .time__colon{
+        height: 60px;
+        width: 60px;
+    }
+    section .container .time .time__colon .time__text .number,
+    section .container .time .colon{
+        font-size: 16px;
+    }
+    section .container .time .time__colon .time__text .text{
+        font-size: 8px;
+    }
+    section .container .time .am__pm{
+        font-size: 8px;
+        right: -25px;
+    }
+}
